@@ -1,0 +1,830 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*color vars*/
+:root {
+  --primary-color: #ffbe33ee;
+  --secondary-color: #222831;
+  --white-color: #ffffff;
+  --dark-color: #1a1a1a;
+}
+
+/* body style */
+body {
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* nav sec style */
+.nav {
+  position: fixed;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  overflow-x: hidden;
+}
+
+.nav-container {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 700;
+  font-family: "Playwrite AU QLD", cursive;
+  padding-left: 50px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  position: relative;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 700;
+  color: var(--white-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-links li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
+}
+.nav-links li:hover::before {
+  width: 100%;
+}
+
+.nav .order-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  margin-right: 40px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: background-color 0.3s;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+}
+
+.nav .order-btn:hover {
+  background-color: #e69b29;
+  color: black;
+}
+
+/* mobile icon */
+.nav .nav-container #mobile-menu-btn {
+  display: none;
+  margin-left: 1rem;
+  margin-right: 2.5rem;
+  border: 2px solid var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.nav .nav-container #mobile-menu-btn:hover {
+  color: var(--primary-color);
+  border-color: #e69b29;
+}
+
+.nav .nav-container .mobile-order-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  margin: auto;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: background-color 0.3s;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+}
+
+.nav .nav-container .dropdown-menu .mobile-order-btn:hover {
+  background-color: #e69b29;
+  color: black;
+}
+
+/* Dropdown Menu */
+.nav .nav-container .dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--dark-color);
+  padding: 1.25rem 4rem;
+  gap: 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.nav .nav-container .dropdown-menu li {
+  position: relative;
+  list-style: none;
+}
+
+.nav .nav-container .dropdown-menu a {
+  font-weight: 700;
+  color: var(--gray-100);
+  text-decoration: none;
+}
+
+.nav .nav-container .dropdown-menu a:hover {
+  color: var(--primary-color);
+}
+
+.nav .nav-container .dropdown-menu li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
+}
+
+.nav .nav-container .dropdown-menu li:nth-child(1):hover::after,
+.nav .nav-container .dropdown-menu li:nth-child(2):hover::after,
+.nav .nav-container .dropdown-menu li:nth-child(3):hover::after {
+  width: 3rem;
+}
+
+.nav .nav-container .dropdown-menu li:nth-child(4):hover::after {
+  width: 4.9rem;
+}
+
+/* hero sec style */
+.hero {
+  overflow: hidden;
+  padding-top: 83px;
+}
+.hero .container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/hero image/hero-bg.jpg.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 690px;
+  padding: 18px 0px;
+  padding-left: 120px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-left: -6.9rem;
+  font-family: "Playwrite AU QLD", cursive;
+}
+
+.hero p {
+  font-size: 15px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  margin-left: -10px;
+}
+
+.hero-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 12px 30px;
+  border-radius: 0px 30px;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: inline-block;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: -24rem;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: #e69a29d7;
+  color: black;
+}
+
+/* undero hero section style */
+.subHero {
+  overflow: hidden;
+  padding-top: 55px;
+}
+
+.subHero .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+}
+
+.subHero .container .card1,
+.subHero .container .card2 {
+  overflow: hidden;
+}
+
+.subHero .container .card1,
+.subHero .container .card2 {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 20px;
+}
+
+.subHero .container .card1 .cardimg,
+.subHero .container .card2 .cardimg {
+  margin-right: -5rem;
+}
+
+.subHero .container .card1 img,
+.subHero .container .card2 img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border: solid 4px var(--primary-color);
+  border-radius: 50%;
+}
+
+.subHero .container .card1:hover img,
+.subHero .container .card2:hover img {
+  scale: 1.1;
+}
+
+.subHero .container .card1 .cardContent,
+.subHero .container .card2 .cardContent {
+  margin-left: -50px;
+  padding-right: 15px;
+}
+
+.subHero .container .card1 .cardContent h2,
+.subHero .container .card2 .cardContent h2 {
+  color: var(--white-color);
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: "Playwrite AU QLD", cursive;
+}
+
+.subHero .container .card1 .cardContent p,
+.subHero .container .card2 .cardContent p {
+  color: var(--white-color);
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 19px;
+}
+
+.subHero .container .card1 .cardContent p span,
+.subHero .container .card2 .cardContent p span {
+  font-family: "Playwrite AU QLD", cursive;
+  font-size: 16px;
+  margin-left: 2px;
+}
+
+.subHero .container .card1 .cardContent .order,
+.subHero .container .card2 .cardContent .order {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  margin-left: -8px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: background-color 0.3s;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.subHero .container .card1 .cardContent .order:hover,
+.subHero .container .card2 .cardContent .order:hover {
+  background-color: #e69b29;
+  color: black;
+}
+
+/* menu sec style */
+.menu {
+  overflow: hidden;
+  padding-top: 83px;
+}
+.menu h2 {
+  font-family: "Playwrite AU QLD", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 0px 20px 0px;
+}
+
+/* menu filter btns */
+
+.menu .filter-buttons ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  padding: 20px 60px;
+  margin-bottom: 10px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .filter-buttons ul a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.menu .filter-buttons ul li:nth-child(1) {
+  background-color: var(--secondary-color);
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.menu .filter-buttons ul li:nth-child(1) a {
+  color: var(--white-color);
+}
+
+.menu .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  padding: 5rem;
+}
+
+/* menu card style */
+.menuCard {
+  width: 100%;
+  background-color: var(--dark-color);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.4s ease;
+  border-radius: 7px;
+}
+
+.menuCard:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.menuImage {
+  width: 100%;
+  height: 220px;
+  background-color: #fffffe;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px 0px 0px 50px;
+}
+
+.menuImage img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  padding-top: 22px;
+  padding-right: 10px;
+}
+
+.menuImage .img2 {
+  padding-top: 30px;
+}
+
+.menuImage .img4,
+.menuImage .img5 {
+  width: 250px;
+  padding-top: 50px;
+}
+.menuContent {
+  padding: 18px 28px 5px 40px;
+}
+
+.menuContent .menuTitle {
+  padding-left: 35px;
+}
+.menu .menuCard .menuContent .menuTitle {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: 16px;
+  letter-spacing: -0.2px;
+  margin-left: -4rem;
+}
+
+.menu .menuCard .menuContent .menuDescription {
+  line-height: 1.65;
+  color: var(--white-color);
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.menu .menuCard .priceContent {
+  padding: 0px 0px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .menuCard .priceContent h3 {
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.menu .menuCard .priceContent p {
+  width: 50px;
+  margin-right: 30px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.menu .menuCard .priceContent i {
+  color: var(--white-color);
+  font-size: 20px;
+  margin: auto;
+  padding-left: 6px;
+}
+
+.menu .container .menuCard:hover img {
+  scale: 1.1;
+  transition: scale 0.5s ease;
+}
+
+.menu .viewMoreBtn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 12px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: block;
+  margin: auto;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 50px;
+  margin-top: -30px;
+}
+
+.menu .viewMoreBtn:hover {
+  background-color: #e69b29;
+  color: black;
+}
+
+/* about sec style */
+.about {
+  overflow: hidden;
+  padding-top: 83px;
+  background-color: var(--secondary-color);
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about .container .about-img {
+  margin-right: -10rem;
+  order: 1;
+}
+
+.about .container .about-img img {
+  width: 65%;
+  padding: 10px 20px 90px 20px;
+}
+.about .container .about-content {
+  margin-top: 15rem;
+  color: var(--white-color);
+  margin-left: -4rem;
+  order: 2;
+}
+
+.about .container .about-content h2 {
+  font-size: 2.5rem;
+  font-family: "Playwrite AU QLD", cursive;
+  margin-bottom: 5px;
+}
+
+.about .container .about-content p {
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+  line-height: 1.4rem;
+  padding: 8px 26px 8px 0px;
+}
+
+.about .container .about-content .about-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 12px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.about .about-content .about-btn:hover {
+  background-color: #e69b29;
+  color: black;
+}
+
+/* book table sec style  */
+.book-table {
+  padding-top: 83px;
+  overflow: hidden;
+}
+
+.book-table .booking-title {
+  font-family: "Playwrite AU QLD", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 0px 14px 0px;
+}
+
+.book-table .container {
+  display: flex;
+  gap: 5px;
+  padding: 9px 5rem;
+}
+
+.booking-form form {
+  margin-top: 5rem;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 90%;
+  padding: 18px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 12px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: block;
+  margin: auto;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.booking-btn:hover {
+  background-color: #e69b29;
+  color: black;
+}
+
+/* Map Styles  in the html code */
+
+.map iframe {
+  border-width: 0px;
+  margin-top: 5rem;
+}
+
+/* testimonial sec style */
+
+.testimonial {
+  padding-top: 84px;
+  overflow: hidden;
+}
+
+.testimonial h2 {
+  font-family: "Playwrite AU QLD", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  margin: 20px 0px 45px 0px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.testimonial-box {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 30px;
+  border-radius: 6px;
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.testimonial-box p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.testimonial-box h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.testimonial-box span {
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: -15px;
+  margin-top: 7px;
+}
+
+.testimonial-image {
+  position: relative;
+  margin-top: -15px;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-image img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Triangle pointer above image */
+.testimonial-image::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 0px;
+  height: 0px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 15px solid var(--primary-color);
+}
+
+/* Navigation buttons */
+.testimonial-btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dir-btn {
+  width: 55px;
+  height: 55px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dir-btn i {
+  font-size: 25px;
+}
+
+.dir-btn:hover {
+  background-color: #e09d21;
+  color: black;
+}
+
+/* footer sec */
+/* footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding-top: 84px;
+  overflow: hidden;
+} */
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 83px 20px 20px;
+  margin-top: 9rem;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 50px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-family: "Playwrite AU QLD", cursive;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.footer-title #hour {
+  margin-top: 5px;
+}
+
+.footer-column p,
+.footer-column span {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Icons list */
+.footer-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--secondary-color);
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-icons a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Footer bottom */
+.footer-bottom {
+  font-size: 17px;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Times New Roman", Times, serif;
+  padding: 30px 0px;
+}
