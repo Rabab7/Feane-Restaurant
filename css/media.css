@@ -154,7 +154,7 @@
 } */
 
 /* s  */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .subHero {
     margin: 0px 10px;
   }
@@ -202,10 +202,10 @@
     margin-top: 3px;
     margin-bottom: 5px;
   }
-}
+} */
 
 /* m devices */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .subHero .container {
     flex-direction: column;
     gap: 30px;
@@ -247,124 +247,130 @@
     font-size: 28px;
     margin: 20px 0px;
   }
+} */
+
+/* =========================
+   SubHero Section (Mobile First)
+/* =========================
+   SubHero Section (Mobile First)
+========================= */
+.subHero .container .card1,
+.subHero .container .card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
 }
+
+.subHero .cardimg img {
+  width: 100px;
+  height: 100px;
+}
+
+.subHero .cardContent {
+  font-size: 16px;
+}
+
+/* شاشات صغيرة (≥576px) */
+@media (min-width: 576px) {
+  .subHero .container .card1,
+  .subHero .container .card2 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  .subHero .cardimg img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .subHero .cardContent {
+    font-size: 18px;
+    max-width: 400px;
+  }
+}
+
+/* شاشات متوسطة وكبيرة (≥992px) */
+@media (min-width: 992px) {
+  .subHero .container .card1,
+  .subHero .container .card2 {
+    gap: 2rem;
+  }
+
+  .subHero .cardimg img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .subHero .cardContent {
+    font-size: 20px;
+    max-width: 500px;
+  }
+}
+
 
 /* media style for menu section */
 
-/* xs  devices */
-@media (max-width: 576px) {
-  .menu h2 {
-    font-size: 30px;
+/* =========================
+   Menu Section
+========================= */
+.menu .menuCard .menuDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.menu .menuDescription img {
+  width: 100px;
+  height: 100px;
+}
+
+.menu .menuDescription .textContent {
+  font-size: 16px;
+}
+
+/* شاشات صغيرة (≥576px) */
+@media (min-width: 576px) {
+  .menu .menuCard .menuDescription {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 1.5rem;
   }
 
-  .menu .filter-buttons ul {
-    font-size: 16px;
-    gap: 8px;
+  .menu .menuDescription img {
+    width: 120px;
+    height: 120px;
   }
 
-  .menuImage {
-    height: 160px;
-  }
-
-  .menuImage img {
-    width: 130px;
-  }
-
-  .menu .menuCard .priceContent h3 {
+  .menu .menuDescription .textContent {
     font-size: 18px;
-  }
-
-  .menu .menuCard .priceContent p {
-    margin-right: 10px;
-    padding: 5px;
-  }
-
-  .menu .viewMoreBtn {
-    font-size: 16px;
-    padding: 10px 25px;
+    max-width: 400px;
   }
 }
 
-/* s devices  */
-@media (max-width: 768px) {
-  #menu .container {
-    grid-template-columns: 1fr;
-  }
-  .menu .filter-buttons ul {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+/* شاشات متوسطة وكبيرة (≥992px) */
+@media (min-width: 992px) {
+  .menu .menuCard .menuDescription {
+    gap: 2rem;
   }
 
-  .menu h2 {
-    font-size: 30px;
-  }
-
-  .menuImage {
-    height: 180px;
-  }
-
-  .menuImage img {
+  .menu .menuDescription img {
     width: 150px;
+    height: 150px;
   }
 
-  .menuImage .img4 {
-    margin-top: -10px;
-  }
-  .menuImage .img5 {
-    margin-top: -30px;
-  }
-
-  .menu .menuCard .priceContent {
-    padding: 0px 40px 20px 40px;
-  }
-
-  .menu .menuCard .priceContent h3 {
-    padding-left: 20px;
-  }
-
-  .menu .menuCard .menuContent .menuTitle {
-    font-size: 25px;
-  }
-
-  .menu .menuCard .menuContent .menuDescription {
-    font-size: 14px;
-    text-align: center;
-    padding: 0px 4px;
-  }
-}
-
-/* m devices */
-@media (max-width: 992px) {
-  .menu .container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 3rem;
-  }
-
-  .menu .filter-buttons ul {
-    gap: 20px;
-    padding: 15px 30px;
-    flex-wrap: wrap;
-  }
-
-  .menu h2 {
-    font-size: 35px;
-  }
-
-  .menu .menuCard .menuContent .menuTitle {
-    margin-left: -70px;
-    font-size: 26px;
-    text-align: center;
-  }
-
-  .menu .menuCard .menuContent .menuDescription {
-    margin-left: 10px;
-  }
-
-  .menu .viewMoreBtn {
-    margin-top: 5px;
-    padding: 15px 29px;
-    font-size: 18px;
+  .menu .menuDescription .textContent {
+    font-size: 20px;
+    max-width: 500px;
   }
 }
 
