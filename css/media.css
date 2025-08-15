@@ -98,76 +98,109 @@
 
 /* subhero sec media style */
 /* xs devices (<576px) */
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
 
+  .subHero {
+    margin: 0px 10px;
+  }
   .subHero .container .card1,
   .subHero .container .card2 {
-    width: 100%;
-    /* margin-left: -8rem; */
-  }
-  .subHero .container .card1 img,
-  .subHero .container .card2 img {
-    width: 100px;
-    height: 100px;
+    width: 80%;
+    margin-right: 20rem;
+    flex-direction: column;
   }
 
-  .subHero .container .card1 .cardContent h2,
-  .subHero .container .card2 .cardContent h2 {
+  .subHero .container .card1 .cardimg , 
+  .subHero .container .card2 .cardimg
+  {
+    margin-left: -20rem;
+   
+  }
+
+  .subHero .container .card1 img,
+  .subHero .container .card2 img {
+    width: 80px;
+    height: 80px;
+    margin-top: -5px;
+  }
+
+
+  .subHero .container .card1 .cardContent h2 {
     font-size: 18px;
+    margin-left: -2rem;
+    margin-top: -15px; 
+  }
+
+  .subHero .container .card2 .cardContent h2{
+    font-size: 18px;
+    margin-left: -1.5rem;
+    margin-top: -20px;
   }
 
   .subHero .container .card1 .cardContent p,
   .subHero .container .card2 .cardContent p {
     font-size: 20px;
+     margin-left: -0.4rem;
+     margin-top: 3px;
   }
-}
+
+  .subHero .container .card1 .cardContent .order , 
+  .subHero .container .card2 .cardContent .order
+  {
+    margin-left: -2rem;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+} */
 
 /* s  */
 @media (max-width: 768px) {
   .subHero {
-    padding-top: 30px;
+    margin: 0px 10px;
   }
-
-  /* .subHero .container {
-    width: 768px;
-  } */
-
   .subHero .container .card1,
   .subHero .container .card2 {
+    width: 80%;
+    margin-right: 19rem;
     flex-direction: column;
-    width: 100%;
-    /* margin-left: -10rem; */
   }
 
-  .subHero .container .card1 {
-    margin-bottom: 2rem;
-    
+  .subHero .container .card1 .cardimg,
+  .subHero .container .card2 .cardimg {
+    margin-left: -20rem;
   }
 
   .subHero .container .card1 img,
   .subHero .container .card2 img {
-    width: 120px;
-    height: 100px;
-    margin-right: 0;
-    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    margin-top: -5px;
   }
 
-  .subHero .container .card1 .cardContent , 
-  .subHero .container .card2 .cardContent
-  {
-    margin: auto;
+  .subHero .container .card1 .cardContent h2 {
+    font-size: 18px;
+    margin-left: -0.9rem;
+    margin-top: -15px;
+  }
+
+  .subHero .container .card2 .cardContent h2 {
+    font-size: 18px;
+    margin-left: -0.2rem;
+    margin-top: -20px;
   }
 
   .subHero .container .card1 .cardContent p,
   .subHero .container .card2 .cardContent p {
-    font-size: 24px;
+    font-size: 20px;
+    margin-left: 1rem;
+    margin-top: 3px;
   }
 
   .subHero .container .card1 .cardContent .order,
   .subHero .container .card2 .cardContent .order {
-    padding: 8px 15px;
-    font-size: 15px;
-    margin-bottom: 11px;
+    margin-left: -1rem;
+    margin-top: 3px;
+    margin-bottom: 5px;
   }
 }
 
@@ -175,46 +208,44 @@
 @media (max-width: 992px) {
   .subHero .container {
     flex-direction: column;
-    width: 992px;
-    /* padding: 20px; */
+    gap: 30px;
   }
 
   .subHero .container .card1,
   .subHero .container .card2 {
-    flex-direction: column;
-    width: 50%;
-    margin-right: auto;
-    margin-left: 7rem;
-  }
-
-  .subHero .card1 .cardContent , 
-  .subHero .card2 .cardContent{
     width: 100%;
-    margin-right: -6rem;
-    margin-top: -16px;
-  }
-
-  .subHero .container .card1 {
-    margin-bottom: 2rem;
+    margin: auto;
+    padding: 30px 0px;
   }
 
   .subHero .container .card1 .cardimg,
   .subHero .container .card2 .cardimg {
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 38px;
   }
 
-  .subHero .container .card1 img,
-  .subHero .container .card2 img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 15px;
+  .subHero .container .card1 .cardimg img,
+  .subHero .container .card2 .cardimg img {
+    width: 200px;
+    height: 200px;
   }
 
   .subHero .container .card1 .cardContent,
   .subHero .container .card2 .cardContent {
-    margin-left: 9rem;
-    padding: 0;
+    margin-right: -19rem;
+    margin-top: -11rem;
+    margin-bottom: 2rem;
+  }
+
+  .subHero .container .card1 .cardContent h2,
+  .subHero .container .card2 .cardContent h2 {
+    font-size: 20px;
+  }
+
+  .subHero .container .card1 .cardContent p,
+  .subHero .container .card2 .cardContent p {
+    font-size: 28px;
+    margin: 20px 0px;
   }
 }
 
@@ -294,13 +325,12 @@
 
   .menu .menuCard .menuContent .menuTitle {
     font-size: 25px;
-    
   }
 
   .menu .menuCard .menuContent .menuDescription {
     font-size: 14px;
     text-align: center;
-    padding: 0px 19px;
+    padding: 0px 4px;
   }
 }
 
@@ -353,7 +383,7 @@
     padding-right: 2.6rem;
   }
 
-  .about .container .about-content h2{
+  .about .container .about-content h2 {
     font-size: 1.9rem;
   }
 
