@@ -197,17 +197,19 @@
   .subHero .container .card2 .cardContent h2 {
     margin-bottom: 10px;
     font-size: medium;
-    font-weight: 500;
+    font-weight: 600;
     margin-left: 2rem;
     letter-spacing: 4px;
   }
   .subHero .container .card1 .cardContent p,
   .subHero .container .card2 .cardContent p {
     margin-bottom: 19px;
+    margin-left: 2rem;
   }
   .subHero .container .card1 .cardContent .order,
   .subHero .container .card2 .cardContent .order {
     margin-bottom: 6px;
+    margin-left: 2rem;
   }
 }
 
