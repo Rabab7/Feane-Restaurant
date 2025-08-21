@@ -643,7 +643,6 @@ body {
 }
 
 /* testimonial sec style */
-
 .testimonial {
   padding-top: 84px;
   overflow: hidden;
@@ -751,12 +750,6 @@ body {
 }
 
 /* footer sec */
-/* footer {
-  background-color: var(--dark-color);
-  color: var(--white-color);
-  padding-top: 84px;
-  overflow: hidden;
-} */
 footer {
   background-color: var(--secondary-color);
   color: white;
