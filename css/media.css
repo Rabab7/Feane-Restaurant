@@ -127,9 +127,6 @@
   .subHero .container .card2 img {
     width: 150px;
     height: 150px;
-    border: solid 4px var(--primary-color);
-    border-radius: 50%;
-    margin-right: 50%;
   }
 
   .subHero .container .card1 .cardContent,
@@ -140,6 +137,9 @@
   .subHero .container .card1 .cardContent h2,
   .subHero .container .card2 .cardContent h2 {
     margin-bottom: 10px;
+    font-size: medium;
+    font-weight: 500;
+    margin-left: 1rem;
   }
   .subHero .container .card1 .cardContent p {
     margin-left: 3rem;
@@ -161,6 +161,13 @@
 
 /* m device  */
 @media (min-width: 768px) and (max-width: 992px) {
+  .subHero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+  }
   .subHero .container .card1,
   .subHero .container .card2 {
     width: 100%;
@@ -170,19 +177,27 @@
     align-items: center;
     gap: 20px;
   }
-
+  .subHero .container .card1 .cardimg , 
+  .subHero .container .card2 .cardimg{
+    margin-right: auto;
+    margin-left: 3rem;
+  }
   .subHero .container .card1 img,
   .subHero .container .card2 img {
     width: 200px;
     height: 200px;
-    border: solid 4px var(--primary-color);
-    border-radius: 50%;
-    margin-right: 50%;
   }
 
+  .subHero .container .card1 .cardContent ,
+  .subHero .container .card2 .cardContent{
+    margin-left: auto;
+    margin-right: 4rem;
+  }
   .subHero .container .card1 .cardContent h2,
   .subHero .container .card2 .cardContent h2 {
     margin-bottom: 10px;
+    font-size: medium;
+    font-weight: 500;
   }
   .subHero .container .card1 .cardContent p,
   .subHero .container .card2 .cardContent p {
@@ -235,7 +250,7 @@
 
   .menu .menuCard .menuContent .menuTitle {
     font-size: 25px;
-    padding-left:2rem;
+    padding-left: 2rem;
   }
 
   .menu .menuCard .menuContent .menuDescription {
