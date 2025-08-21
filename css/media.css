@@ -198,6 +198,8 @@
     margin-bottom: 10px;
     font-size: medium;
     font-weight: 500;
+    margin-left: 2rem;
+    letter-spacing: 4px;
   }
   .subHero .container .card1 .cardContent p,
   .subHero .container .card2 .cardContent p {
